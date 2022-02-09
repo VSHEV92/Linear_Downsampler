@@ -1,0 +1,6 @@
+AXI_Lite_UVM_Agent
+AXIS_UVM_Agent
+*.jou 
+*.log
+*.str
+.Xil
