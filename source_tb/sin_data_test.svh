@@ -13,16 +13,17 @@ endclass
 function void sin_data_test::build_phase(uvm_phase phase);
     super.build_phase(phase);
 
-    axis_seqc_in = axis_sin_sequence::type_id::create("axis_seqc_in", this);
-    axis_seqc_out = axis_sin_sequence::type_id::create("axis_seqc_out", this);
-
     axis_seqc_out_config.trans_numb = 100;
     axis_seqc_in_config.trans_numb = 1000*axis_seqc_out_config.trans_numb;
 
     axis_seqc_in_config.max_clock_before_tvalid = 4;
     axis_seqc_out_config.max_clock_before_tready = 5;   
 
-    axis_seqc_in.axis_seqc_config = axis_seqc_in_config;
-    axis_seqc_out.axis_seqc_config = axis_seqc_out_config;
+    axi_lite_seqc_config.max_clocks_before_addr = 10;
+    axi_lite_seqc_config.min_clocks_before_addr = 4;
+    axi_lite_seqc_config.max_clocks_before_data = 10;
+    axi_lite_seqc_config.min_clocks_before_data = 4;
+    axi_lite_seqc_config.max_clocks_before_resp = 10;
+    axi_lite_seqc_config.min_clocks_before_resp = 4;
       
 endfunction
