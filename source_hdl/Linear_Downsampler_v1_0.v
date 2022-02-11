@@ -1,6 +1,25 @@
 
 `timescale 1 ns / 1 ps
 
+	//! {reg: [
+	//!	{bits: 16, name: 'reset', attr: 'Write 0x00A0 to ip reset', type: 3},
+	//! {bits: 16, name: 'reserved'},
+	//! ]}
+
+	//! {reg: [
+	//!	{bits: 32, name: 'ratio', type: 3},
+	//! ]}
+
+	//! {reg: [
+	//!	{bits: 32, name: 'reciprocal ratio', type: 3},
+	//! ]}
+
+	//! {reg: [
+	//!	{bits: 1, type: 3},
+	//! {bits: 31, name: 'reserved', attr: 'Write 0x1 to update ip dpwnsampling ratio'},
+	//! ]}
+
+
 	module Linear_Downsampler_v1_0 #
 	(
 		// Users to add parameters here

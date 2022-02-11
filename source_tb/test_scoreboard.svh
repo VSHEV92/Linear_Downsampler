@@ -75,8 +75,8 @@ function void test_scoreboard::final_phase (uvm_phase phase);
     end
 
     if (test_result)
-        `uvm_info("RESULT", "TEST RESULT: PASS", UVM_LOW)
+        `uvm_info("RESULT", $sformatf("RATIO = %f. TEST RESULT: PASS", `FREQ_RATIO) , UVM_LOW)
     else
-        `uvm_info("RESULT", "TEST RESULT: FAIL", UVM_LOW)
+        `uvm_info("RESULT", $sformatf("RATIO = %f. TEST RESULT: FAIL", `FREQ_RATIO) , UVM_LOW)
         
 endfunction

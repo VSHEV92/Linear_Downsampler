@@ -1,9 +1,9 @@
+ip:
+	vivado -mode batch -source scripts/package_ip.tcl
+
 AXI_UVM_Agents:
 	git clone https://github.com/VSHEV92/AXI_Lite_UVM_Agent.git
 	git clone https://github.com/VSHEV92/AXIS_UVM_Agent.git
-
-ip:
-	vivado -mode batch -source scripts/package_ip.tcl
 	
 tests:
 	FREQ_RATIO=1 make test_ip | tee test_ratio_one.txt
@@ -23,9 +23,9 @@ check:
 	cat *.txt | grep "TEST RESULT"
 
 clean:
-	rm -Rf work .Xil
+	rm -Rf work
 	rm -Rf Linear_Downsampler_1.0
-	rm -f transcript
-	rm -f test_ratio*.txt
-	rm -f *.wlf *.jou *.log
+	rm transcript
+	rm test_ratio*.txt
+	rm *.wlf
 

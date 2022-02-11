@@ -9,6 +9,8 @@ package test_pkg;
     `include "axis_sin_sequence.svh"
     `include "axi_lite_config_sequence.svh"
     
+    `include "register_classes.svh"
+
     `include "test_scoreboard.svh"
     `include "test_env.svh"
 
